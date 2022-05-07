@@ -2,7 +2,7 @@
 source ./src/utils/contains_element.sh
 
 ACTIONS=(help onboard)
-GLOBAL_CLI_PATH=$HOME/knock/global-cli
+GLOBAL_CLI_PATH=$HOME/repos/global-cli
 
 
 global() {

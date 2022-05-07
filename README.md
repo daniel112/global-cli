@@ -2,6 +2,7 @@
 
 ## Install
 
+- clone this repo under `$HOME/repos`
 - run `./install.sh`
 
 ## Commands
