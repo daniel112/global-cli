@@ -1,8 +1,9 @@
 #!/bin/bash
-source ./src/utils/contains_element.sh
 
 ACTIONS=(help onboard)
 GLOBAL_CLI_PATH=$HOME/repos/global-cli
+
+source $GLOBAL_CLI_PATH/src/utils/contains_element.sh
 
 
 global() {
