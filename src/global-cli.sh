@@ -41,6 +41,8 @@ onboard() {
   echo "-----Checking for firebase cli-----"
   verify_firebase_cli
 
+  echo "-----Checking for cocoapods-----"
+  verify_cocoapods
   # echo "-----Checking for ruby version-----"
   # verify_ruby_version
 
@@ -51,6 +53,17 @@ onboard() {
   verify_fastlane
 
   echo "DONE!"
+}
+
+verify_cocoapods() {
+local TEXT_RESULT=$(which pod)
+  if [[ -z $TEXT_RESULT  || $TEXT_RESULT =~ "not found" ]]; then
+    echo "cocoapod not found, installing..."
+    sudo gem install cocoapods
+  fi
+
+  echo "\Cocoapod is installed"
+  pod --version
 }
 
 verify_fastlane() {
