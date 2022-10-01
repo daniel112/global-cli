@@ -13,3 +13,10 @@ else
   echo ""$HOME"/.bash_profile already updated."
 fi
 
+if ! grep -Fxq "$SOURCE_STRING" $HOME/.zprofile; then
+  echo "Modifying "$HOME"/.zprofile..."
+  echo "$SOURCE_STRING" >> $HOME/.zprofile
+else
+  echo ""$HOME"/.zprofile already updated."
+fi
+
